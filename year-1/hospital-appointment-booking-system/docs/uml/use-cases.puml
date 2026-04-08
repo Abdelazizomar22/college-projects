@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+actor Receptionist
+
+usecase "Register patient" as UC1
+usecase "Add doctor" as UC2
+usecase "Book appointment" as UC3
+usecase "Cancel appointment" as UC4
+usecase "View doctor schedule" as UC5
+usecase "View patient appointments" as UC6
+usecase "Save/load data" as UC7
+
+Receptionist --> UC1
+Receptionist --> UC2
+Receptionist --> UC3
+Receptionist --> UC4
+Receptionist --> UC5
+Receptionist --> UC6
+Receptionist --> UC7
+@enduml
+

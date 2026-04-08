@@ -1,0 +1,48 @@
+# OS
+Thumbs.db
+Desktop.ini
+
+# VS / MSBuild
+.vs/
+*.user
+*.suo
+*.vcxproj*
+*.sln
+out/
+
+# CMake
+**/build/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+
+# Binaries
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.o
+*.a
+*.lib
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.python-version
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Kaggle / data
+kaggle.json
+.kaggle/
+**/data/*.csv
+
+# ML artifacts
+*.joblib
+*.pkl
+**/models/*.joblib
+**/models/*.pkl

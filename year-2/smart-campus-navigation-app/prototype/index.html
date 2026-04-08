@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Campus Navigation (Prototype)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Smart Campus Navigation</h1>
+      <p class="subtitle">Prototype demo (search + simple directions)</p>
+    </header>
+
+    <main class="container" aria-label="Campus navigation prototype">
+      <section class="card" aria-label="Search buildings">
+        <h2>Find a place</h2>
+        <label class="label" for="q">Search</label>
+        <input id="q" class="input" type="search" placeholder="e.g., Library, CS Building" autocomplete="off" />
+        <p class="hint" id="hint">Tip: type and press Enter. Use the list for keyboard navigation.</p>
+
+        <ul id="results" class="results" role="listbox" aria-label="Search results"></ul>
+      </section>
+
+      <section class="card" aria-label="Directions">
+        <h2>Directions</h2>
+        <div class="grid">
+          <div>
+            <label class="label" for="from">From</label>
+            <select id="from" class="select" aria-describedby="fromHelp"></select>
+            <div class="hint" id="fromHelp">Choose your starting point.</div>
+          </div>
+          <div>
+            <label class="label" for="to">To</label>
+            <select id="to" class="select" aria-describedby="toHelp"></select>
+            <div class="hint" id="toHelp">Choose your destination.</div>
+          </div>
+        </div>
+        <button id="routeBtn" class="btn" type="button">Show directions</button>
+
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+        <ol id="steps" class="steps" aria-label="Direction steps"></ol>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Accessibility: keyboard-friendly controls, visible focus, aria-live feedback.</small>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,33 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Patient {
+  +id: int
+  +name: string
+  +phone: string
+}
+
+class Doctor {
+  +id: int
+  +name: string
+  +specialty: string
+}
+
+enum AppointmentStatus {
+  Scheduled
+  Cancelled
+  Completed
+}
+
+class Appointment {
+  +id: int
+  +patient_id: int
+  +doctor_id: int
+  +datetime: string
+  +status: AppointmentStatus
+}
+
+Patient "1" -- "*" Appointment
+Doctor "1" -- "*" Appointment
+@enduml
+
